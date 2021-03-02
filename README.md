@@ -6,5 +6,9 @@ Link of course: https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNf
 While doing this project I met an issues that I would like to update here.
 
 
-
+1) Login error after Delete Profile picture from Admin: 
+  - Error 1:RelatedObjectDoesNotExist at /admin/login/, no such column: user_details_profile.id
+    - Solution: https://stackoverflow.com/questions/52244032/i-keep-getting-relatedobjectdoesnotexist-at-admin-login-how-do-i-successfully
+  - Error 2: Exception Value: save() got an unexpected keyword argument 'force_insert'
+    - Solution: https://stackoverflow.com/questions/58157297/type-error-save-got-an-unexpected-keyword-argument-force-insert
 
