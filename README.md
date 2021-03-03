@@ -11,4 +11,7 @@ While doing this project I met an issues that I would like to update here.
     - Solution: https://stackoverflow.com/questions/52244032/i-keep-getting-relatedobjectdoesnotexist-at-admin-login-how-do-i-successfully
   - Error 2: Exception Value: save() got an unexpected keyword argument 'force_insert'
     - Solution: https://stackoverflow.com/questions/58157297/type-error-save-got-an-unexpected-keyword-argument-force-insert
-
+    
+    
+2) I did mistake in line date_posted if blog model.
+  - Solution code: timezone.now instead timezone.now()
