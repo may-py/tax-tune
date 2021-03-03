@@ -13,5 +13,5 @@ While doing this project I met an issues that I would like to update here.
     - Solution: https://stackoverflow.com/questions/58157297/type-error-save-got-an-unexpected-keyword-argument-force-insert
     
     
-2) I did mistake in line date_posted if blog model.
-  - Solution code: timezone.now instead timezone.now()
+2) I did mistake in date_posted line code of blog models.
+  - Solution code: timezone.now instead of timezone.now()
