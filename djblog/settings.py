@@ -26,9 +26,7 @@ SECRET_KEY = os.environ.get('DEBUG_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'maydjangoapp.herokuapp.com'
-]
+ALLOWED_HOSTS = ['maydjangoapp.herokuapp.com']
 
 # Application definition
 
