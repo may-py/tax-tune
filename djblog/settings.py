@@ -136,3 +136,8 @@ EMAIL_HOST_PASSWORD = os.environ.get('email_pass')
 EMAIL_USE_TLS = True
 EMAIL_TIMEOUT = 300
 
+import django_heroku
+
+django_heroku.settings(locals())
+
+
