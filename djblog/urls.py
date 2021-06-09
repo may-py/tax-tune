@@ -2,6 +2,9 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from users import views as user_views
+from django.conf.urls import url
+from django.conf.urls.static import serve
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -21,6 +24,8 @@ urlpatterns = [
     path('password-reset-complete/',
          auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),
          name='password_reset_complete'),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':settings.MEDIA_ROOT}),
+    url(r'^blog/static/(?P<path>.*)$', serve,{'document_root':settings.STATIC_ROOT}),
 ]
 
 from django.conf import settings
