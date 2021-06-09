@@ -1,1 +1,1 @@
-web: gunicorn djblog.wsgi
+web: gunicorn tex-truong.wsgi
