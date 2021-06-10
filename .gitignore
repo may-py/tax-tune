@@ -1,5 +1,3 @@
-.env 
-@ -1,138 +1 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
