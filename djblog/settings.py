@@ -139,3 +139,5 @@ EMAIL_USE_TLS = True
 EMAIL_TIMEOUT = 300
 
 django_heroku.settings(locals())
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
