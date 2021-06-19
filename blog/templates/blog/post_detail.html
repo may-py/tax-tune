@@ -16,6 +16,18 @@
         </div>
         <h2 class="article-title">{{ object.title }}</h2>
         <p class="article-content">{{ object.content }}</p>
+        <h2>Comments</h2>
+        {% if not object.comment.all %}
+          Not yet comment <a href="{% url 'comment' post.pk %}">Add one</a>
+        {% else %}
+          {% for comment in object.comment.all %}
+            <br/>
+        <strong>{{ comment.name }} - {{ comment.date_added }}</strong> <br/>
+        {{ comment.body }}
+          {% endfor %}
+        <br/>
+          <a href="{% url 'comment' post.pk %}">New Comment</a>
+        {% endif %}
       </div>
     </article>
 {% endblock content %}
