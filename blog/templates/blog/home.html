@@ -11,6 +11,17 @@
             </div>
             <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
+
+                      {% if user.is_authenticated %}
+        <form action="{% url 'post-like' post.pk %}" method="POST">
+          {% csrf_token %}
+          <button type="submit" name="post_id", value="{{ post.id }}", class="btn btn-primary">Like </button> {{ post.total_likes }}
+        </form>
+        {% else %}
+          <a class="btn btn-primary", href="{% url 'login' %}">Login & Like!</a>
+        {% endif %}
+
+
           </div>
         </article>
     {% endfor %}
