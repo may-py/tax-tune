@@ -16,6 +16,18 @@
         </div>
         <h2 class="article-title">{{ object.title }}</h2>
         <p class="article-content">{{ object.content }}</p>
+
+        {% if user.is_authenticated %}
+        <form action="{% url 'post-like' post.pk %}" method="POST">
+          {% csrf_token %}
+          <button type="submit" name="post_id", value="{{ post.id }}", class="btn btn-primary">Like {{ post.total_likes }} </button>
+        </form>
+        {% else %}
+          <a class="btn btn-primary", href="{% url 'login' %}">Login & Like!</a>
+        {% endif %}
+
+
+
         <h2>Comments</h2>
         {% if not object.comment.all %}
           Not yet comment <a href="{% url 'comment' post.pk %}">Add one</a>
